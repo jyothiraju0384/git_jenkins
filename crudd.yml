@@ -1,0 +1,34 @@
+mode: crud
+name: 'lambda'
+# Specify resource ARNs
+read:
+- 'arn:aws:s3:::demosestest'
+write:
+- ''
+list:
+- ''
+tagging:
+- ''
+permissions-management:
+- ''
+# Actions that do not support resource constraints
+wildcard-only:
+  single-actions: # standalone actions
+  - ''
+  # Service-wide - like 's3' or 'ec2'
+  service-read:
+  - 's3'
+  service-write:
+  - 's3'
+  service-list:
+  - ''
+  service-tagging:
+  - ''
+  service-permissions-management:
+  - ''
+# Skip resource constraint requirements by listing actions here.
+skip-resource-constraints:
+- ''
+# Exclude actions from the output by specifying them here. Accepts wildcards, like kms:Delete*
+exclude-actions:
+- ''
